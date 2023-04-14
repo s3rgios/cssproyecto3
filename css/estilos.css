@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    /* Colores */
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* 1rem = 10px */
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.8rem;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--main-bg);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    width: 90%;
+    margin: 0 auto;
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.75);
+}
+
+@media (min-width:768px){
+    .card{
+        width: 46rem;
+    }
+}
+
+.card__imagen-top{
+    position: relative;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.card__imagen-top:hover .card__img-overlay{
+    display: block;
+    cursor: pointer;
+}
+
+.card__imagen{
+    width:100%;
+    display: block;
+}
+
+.card__img-overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: hsla(178, 100%, 50%,0.5);
+    display: none;
+}
+
+.card__img-overlay img{
+    position: absolute;
+    width: 5rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.card__titulo{
+    color: var(--white);
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.card__titulo:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.card__descripcion{
+    color: var(--soft-blue);
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+.items{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.items__titulo{
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+.items__porcentaje{
+    color: var(--cyan);
+    font-weight: 600;
+}
+
+.items__days{
+    color: var(--soft-blue);
+    font-weight: 300;
+}
+
+.card__presentacion{
+    display: flex;
+    align-items: center;
+    border-top: 0.5px solid var(--line);
+    padding: 2rem 0;
+}
+
+.card__imagen-persona{
+    width: 3.5rem;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+}
+
+.card__creator{
+    margin-left: 2rem;
+    color: var(--soft-blue);
+}
+
+.card__name{
+    color: var(--white);
+}
+
+.card__name:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
